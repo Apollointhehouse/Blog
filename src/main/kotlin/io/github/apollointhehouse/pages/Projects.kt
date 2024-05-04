@@ -10,7 +10,7 @@ fun HTML.projects() {
         script { src = "https://cdn.tailwindcss.com" }
     }
     body {
-        navbar("Home" to "index", "Projects" to "projects")
+        navbar("Home" to "../", "Projects" to "./")
         main {
             h1 { +"Coming Soon..." }
         }

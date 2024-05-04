@@ -10,7 +10,7 @@ import java.io.File
 
 fun main() {
     router {
-        set("index") { index() }
+        set("") { index() }
         set("projects") { projects() }
     }.generateDocs()
 }
@@ -24,7 +24,8 @@ fun router(block: MutableMap<String, HTML.() -> Unit>.() -> Unit): Map<String, H
 fun Map<String, HTML.() -> Unit>.generateDocs() {
     forEach { (name, doc) ->
         val html = createHTMLDocument().html(block = doc).serialize()
-        val file = File("docs/$name.html")
+        val file = File("docs/$name/index.html")
+        file.parentFile.mkdirs()
         file.createNewFile()
 
         file.writeText(html)
