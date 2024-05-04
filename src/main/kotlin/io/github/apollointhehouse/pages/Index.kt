@@ -1,7 +1,7 @@
-package pages
+package io.github.apollointhehouse.pages
 
 import kotlinx.html.*
-import navbar
+import io.github.apollointhehouse.components.navbar
 
 fun HTML.index() {
     lang = "en"
@@ -10,10 +10,9 @@ fun HTML.index() {
         script { src = "https://cdn.tailwindcss.com" }
     }
     body {
-        navbar("index" to "Home", "join" to "Join Us", "resources" to "Resources")
+        navbar("Home" to "index", "Projects" to "projects")
         main {
-            h1 { +"Home Page" }
+            h1 { +"Coming Soon..." }
         }
-        footer() { +"© Apollo Cameron-Boot 2024" }
     }
 }

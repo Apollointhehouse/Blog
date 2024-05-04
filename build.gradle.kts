@@ -1,8 +1,10 @@
+val kotlinxHtml: String by project
+
 plugins {
     kotlin("jvm") version "1.9.22"
 }
 
-group = "org.example"
+group = "io.github.apollointhehouse"
 version = "1.0-SNAPSHOT"
 
 repositories {
@@ -10,7 +12,7 @@ repositories {
 }
 
 dependencies {
-    testImplementation("org.jetbrains.kotlin:kotlin-test")
+    implementation("org.jetbrains.kotlinx:kotlinx-html-jvm:$kotlinxHtml")
 }
 
 tasks.test {

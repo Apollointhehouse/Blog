@@ -1,16 +1,18 @@
 package io.github.apollointhehouse.pages
 
 import kotlinx.html.*
-import io.github.apollointhehouse.navbar
+import io.github.apollointhehouse.components.navbar
 
-fun HTML.join() {
+fun HTML.projects() {
     lang = "en"
     head {
-        title { +"Join Us" }
+        title { +"Projects" }
         script { src = "https://cdn.tailwindcss.com" }
     }
     body {
-        navbar("index" to "Home", "join" to "Join Us", "resources" to "Resources")
-        h1 { +"Hello, Kotlin!" }
+        navbar("Home" to "index", "Projects" to "projects")
+        main {
+            h1 { +"Coming Soon..." }
+        }
     }
 }

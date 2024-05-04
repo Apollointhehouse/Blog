@@ -1,7 +1,8 @@
-package io.github.apollointhehouse
+package io.github.apollointhehouse.components
 
 import kotlinx.html.*
 
+/** display name, file name*/
 typealias Page = Pair<String, String>
 
 fun FlowContent.navbar(vararg pages: Page) = nav {
@@ -9,7 +10,7 @@ fun FlowContent.navbar(vararg pages: Page) = nav {
         div("flex items-center space-x-8") {
             div("hidden md:flex justify-around space-x-4") {
                 pages.forEach {
-                    a(classes = "hover:text-indigo-600 text-gray-700", href = "${it.first}.html") { +it.second }
+                    a(classes = "hover:text-indigo-600 text-gray-700", href = "${it.second}.html") { +it.first }
                 }
             }
         }
